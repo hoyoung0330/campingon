@@ -2,6 +2,7 @@ package com.example.admobtest;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.ads.AdListener;
@@ -76,6 +77,10 @@ public class MainActivity extends AppCompatActivity {
                         Log.e(TAG, "Error Code: NO_FILL (3) - The ad request was successful, but no ad was returned due to lack of ad inventory.");
                         break;
                 }
+
+                // UI에 에러 메시지 표시 (운영 환경 테스트 시 유용)
+                String toastMessage = String.format("Ad Failed: %d (%s)", errorCode, errorMessage);
+                Toast.makeText(MainActivity.this, toastMessage, Toast.LENGTH_LONG).show();
             }
 
             @Override
