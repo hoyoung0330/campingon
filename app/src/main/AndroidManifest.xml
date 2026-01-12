@@ -20,7 +20,7 @@
         <!-- 중요: 실제 앱 출시 시에는 본인의 AdMob App ID로 교체해야 합니다. 아래는 테스트 ID입니다. -->
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-3940256099942544~3347511713"/>
+            android:value="ca-app-pub-3042467370954651~6459753443"/>
 
         <activity
             android:name=".MainActivity"
