@@ -47,7 +47,10 @@ public class MainActivity extends AppCompatActivity {
         mAdView.setAdListener(new AdListener() {
             @Override
             public void onAdFailedToLoad(LoadAdError loadAdError) {
-                Log.e(TAG, "Banner Ad Failed to Load: " + loadAdError.getMessage());
+                Log.e(TAG, "Banner Ad Failed to Load: " + loadAdError.getMessage() +
+                        ", Code: " + loadAdError.getCode() +
+                        ", Domain: " + loadAdError.getDomain() +
+                        ", Response Info: " + loadAdError.getResponseInfo());
             }
 
             @Override
@@ -113,7 +116,10 @@ public class MainActivity extends AppCompatActivity {
 
                 @Override
                 public void onAdFailedToLoad(@NonNull LoadAdError loadAdError) {
-                    Log.e(TAG, "Interstitial Ad Failed to Load: " + loadAdError.getMessage());
+                    Log.e(TAG, "Interstitial Ad Failed to Load: " + loadAdError.getMessage() +
+                            ", Code: " + loadAdError.getCode() +
+                            ", Domain: " + loadAdError.getDomain() +
+                            ", Response Info: " + loadAdError.getResponseInfo());
                     mInterstitialAd = null;
                 }
             });
